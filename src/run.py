@@ -34,12 +34,21 @@ def main():
 
     # 4) Run clustering pipelines
     run_method(
+        name="kmeans_sieved",
+        clusterer_cls=KMeansClusterer,
+        X=X,
+        k_range=range(2, 8),
+        sieve=10,  # 10% of X used to fit
+        random_state=42,
+    )
+    run_method(
         name="kmeans",
         clusterer_cls=KMeansClusterer,
         X=X,
-        k_range=k_range,
-        random_state=123
+        k_range=range(2, 8),
+        random_state=42,
     )
+
     run_method(
         name="agglo",
         clusterer_cls=AgglomerativeClusterer,
@@ -51,7 +60,7 @@ def main():
         clusterer_cls=GMMClusterer,
         X=X,
         k_range=k_range,
-        random_state=123
+        random_state=42
     )
     run_method(
         name="dbscan",
@@ -62,8 +71,17 @@ def main():
     )
 
     # 5) Save labels for k=3
-    labels = assign_clusters(KMeansClusterer, X, n_clusters=4, random_state=0)
+
+    labels = assign_clusters(
+        KMeansClusterer,
+        X,
+        sieve_frac=0.1,
+        random_state=0,
+        n_clusters=5  # must pass k here
+    )
+
     save_cluster_labels(X, labels, filepath="k4_labels.csv")
+
 
 
 if __name__ == "__main__":
