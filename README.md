@@ -36,12 +36,13 @@ pip install -r requirements.txt
 The `requirements.txt` pins:
 
 ```
-numpy==1.24.2
-pandas==2.0.1
-scipy==1.10.0
-scikit-learn==1.2.2
-matplotlib==3.7.1
-kneed==0.7.0
+numpy==1.24.3
+pandas==2.2.3
+scipy==1.10.1
+scikit-learn==1.5.2
+matplotlib==3.9.2
+kneed==0.8.5
+pytest==8.4.1
 ```
 
 ---
@@ -75,23 +76,6 @@ kneed==0.7.0
 
 ## Quickstart
 
-```bash
-python run.py \
-  --method kmeans \
-  --k-range 2 10 \
-  --random-state 42 \
-  --consensus-method vote_elbow \
-  --elbow-metrics inertia
-```
-
-This will create:
-
-- `kmeans_metrics.csv`  
-- `kmeans_virtual_centroids.csv`  
-- `kmeans_real_centroids.csv`  
-- `kmeans_3x3_metrics.png`
-
----
 
 ## Core Modules
 
