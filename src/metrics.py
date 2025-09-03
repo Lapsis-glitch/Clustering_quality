@@ -53,6 +53,9 @@ def compute_cophenetic_correlation(X, method='ward', metric='euclidean'):
     """
     Z = linkage(X, method=method, metric=metric)
     coph_corr, _ = cophenet(Z, pdist(X, metric))
+    # if the denominator was zero (constant distances), treat as perfect correlation
+    if np.isnan(coph_corr):
+        return 1.0
     return float(coph_corr)
 
 

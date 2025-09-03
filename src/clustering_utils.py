@@ -244,8 +244,10 @@ def _consensus_borda(
     for m in metrics:
         asc = not hib.get(m, True)
         rank_df[m] = df[m].rank(method='min', ascending=asc)
-    total = rank_df.sum(axis=1)
-    return 1.0 / total
+    total_rank = rank_df.sum(axis=1)
+    total_rank = total_rank.replace(0, np.finfo(float).eps)
+    return 1.0 / total_rank
+
 
 def _consensus_topsis(
     df: pd.DataFrame,
@@ -259,10 +261,11 @@ def _consensus_topsis(
     Xn = X / norms
     # weights
     if weights is None:
-        w = np.ones(len(metrics)) / len(metrics)
+        w = np.ones(n_metrics) / n_metrics
     else:
         w = np.array(weights, float)
-        w = w / w.sum()
+        w = w / w.sum()  # normalize
+
     W = Xn * w[np.newaxis, :]
     # ideal / anti‐ideal
     hib_mask = np.array([hib.get(m, True) for m in metrics])
