@@ -315,6 +315,61 @@ if __name__ == "__main__":
 
 ---
 
+## Citations
+
+### Clustering Algorithms
+
+- **K-Means Clustering**  
+  MacQueen, J. (1967). "Some Methods for Classification and Analysis of Multivariate Observations." In Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and Probability, Vol. 1, pp. 281–297.
+
+- **Agglomerative Hierarchical Clustering**  
+  Johnson, S. C. (1967). "Hierarchical clustering schemes." Psychometrika, 32(3), 241–254.
+
+- **Gaussian Mixture Models (GMM)**  
+  Dempster, A. P., Laird, N. M., & Rubin, D. B. (1977). "Maximum likelihood from incomplete data via the EM algorithm." Journal of the Royal Statistical Society: Series B, 39(1), 1–22.
+
+- **DBSCAN (Density-Based Spatial Clustering of Applications with Noise)**  
+  Ester, M., Kriegel, H.-P., Sander, J., & Xu, X. (1996). "A density-based algorithm for discovering clusters in large spatial databases with noise." In Proceedings of KDD, pp. 226–231.
+
+---
+
+### Clustering Evaluation Metrics
+
+- **Silhouette Score**  
+  Rousseeuw, P. J. (1987). "Silhouettes: a graphical aid to the interpretation and validation of cluster analysis." Journal of Computational and Applied Mathematics, 20, 53–65.
+
+- **Calinski–Harabasz Index**  
+  Caliński, T., & Harabasz, J. (1974). "A dendrite method for cluster analysis." Communications in Statistics, 3(1), 1–27.
+
+- **Davies–Bouldin Index**  
+  Davies, D. L., & Bouldin, D. W. (1979). "A cluster separation measure." IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-1(2), 224–227.
+
+- **Cophenetic Correlation Coefficient**  
+  Sokal, R. R., & Rohlf, F. J. (1962). "The comparison of dendrograms by objective methods." Taxon, 11(2), 33–40.
+
+- **Inconsistency Coefficient (Hierarchical Linkage)**  
+  Murtagh, F., & Contreras, P. (2012). "Algorithms for hierarchical clustering: an overview." Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery, 2(1), 86–97.
+
+- **Gap Statistic**  
+  Tibshirani, R., Walther, G., & Hastie, T. (2001). "Estimating the number of clusters in a data set via the gap statistic." Journal of the Royal Statistical Society: Series B, 63(2), 411–423.
+
+- **BIC/AIC for GMM**  
+  Schwarz, G. (1978). "Estimating the dimension of a model." The Annals of Statistics, 6(2), 461–464.  
+  Akaike, H. (1974). "A new look at the statistical model identification." IEEE Transactions on Automatic Control, 19(6), 716–723.
+
+- **DBSCAN Noise/Core/Border Classification**  
+  Schubert, E., Sander, J., Ester, M., Kriegel, H.-P., & Xu, X. (2017). "DBSCAN revisited, revisited: Why and how you should (still) use DBSCAN." ACM Transactions on Database Systems, 42(3), 19.
+
+---
+
+### General Clustering Quality Theory
+
+- Ackerman, M., & Ben-David, S. (2009). "Measures of Clustering Quality: A Working Set of Axioms for Clustering." In NeurIPS.  
+  [Read the paper](https://papers.neurips.cc/paper/3491-measures-of-clustering-quality-a-working-set-of-axioms-for-clustering.pdf)
+
+- Emmons, S., Kobourov, S., Gallant, M., & Börner, K. (2016). "Analysis of Network Clustering Algorithms and Cluster Quality Metrics at Scale." PLOS ONE, 11(7): e0159161.  
+  [View article](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0159161)
+
 ## License
 
 This project is licensed under the GNU GENERAL PUBLIC LICENSE v3. See [LICENSE](LICENSE) for details.
